@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Support Xoder</title>
+
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --radius: 14px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --border: #1e293b;
+      --accent: #3b82f6;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 540px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin: 0 0 6px;
+  }
+
+  p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .paypal-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .payment {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 14px;
+    margin-top: 14px;
+    align-items: center;
+  }
+
+  .qr-box {
+    width: 90px;
+    height: 90px;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .qr-box img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+  }
+
+  .address {
+    font-family: monospace;
+    font-size: 13px;
+    word-break: break-all;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .hint {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 20px;
+  }
+</style>
+</head>
+
+<body>
+<main class="container">
+
+  <!-- INTRO -->
+  <section class="card">
+    <h1>Support Xoder</h1>
+    <p>
+      If my projects helped you, consider supporting its development.
+      Donations help maintain the project and fund future improvements.
+    </p>
+  </section>
+
+  <!-- PAYPAL -->
+  <section class="card">
+    <h1>PayPal</h1>
+    <p>Donate easily using PayPal.</p>
+    <div class="payment">
+      <div class="qr-box" style="background:white;">
+        <img src="address/paypal.png" alt="PayPal QR">
+      </div>
+
+      <div>
+        <div class="address">ramanantoaninatsilavina@gmail.com</div>
+        <div class="hint">or Scan QR</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRYPTO -->
+  <section class="card">
+    <h1>Crypto Donations</h1>
+    <p>Send crypto using the correct network.</p>
+    <!-- TRX -->
+    <div class="payment">
+      <div class="qr-box" style="background:white;">
+        <img src="address/trx.jpg" alt="TRX QR">
+      </div>
+
+      <div>
+        <div class="label">TRON (TRX)</div>
+        <div class="address">TQ4T3zX4Mq8SZXDinL8tTdGwrHL7CL8ohE</div>
+        <div class="hint">TRC20 network</div>
+      </div>
+    </div>
+    
+    <!-- BTC -->
+    <div class="payment">
+      <div class="qr-box" style="background:white;padding:1px;">
+          <img src="address/bitcoin.png" alt="BTC QR">
+      </div>
+
+      <div>
+        <div class="label">Bitcoin (BTC)</div>
+        <div class="address">bc1q5epjehs9m74hy2zjr3wt8f0e8r5s0k9uvu3h6u</div>
+        <div class="hint">BTC network only</div>
+      </div>
+    </div>
+
+    <!-- LTC -->
+    <div class="payment">
+      <div class="qr-box" style="background:white;padding:1px;">
+          <img src="address/litecoin.png" alt="LTC QR">
+      </div>
+
+      <div>
+        <div class="label">Litecoin (LTC)</div>
+        <div class="address">ltc1qxk6rc2tv82tkamlj4qw86dmzeapemckm0x3yhv</div>
+        <div class="hint">Litecoin network</div>
+      </div>
+    </div>
+
+    <!-- ETH -->
+    <div class="payment">
+      <div class="qr-box" style="background:white;padding:1px;">
+          <img src="address/ethereum.png" alt="ETH QR">
+      </div>
+      <div>
+        <div class="label">Ethereum (ETH)</div>
+        <div class="address">0x7A8d223680AEFF961cEabba747775Fb64950eb39</div>
+        <div class="hint">Ethereum network</div>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <!-- TRANSPARENCY -->
+  <section class="card">
+    <h1>How donations are used</h1>
+    <p>• Development & maintenance</p>
+    <p>• Infrastructure & hosting</p>
+    <p>• Security & performance improvements</p>
+    <p>• Open-source contributions</p>
+  </section>
+
+  <div class="footer">
+    Thank you for your support 🤍
+  </div>
+
+</main>
+</body>
+</html>
