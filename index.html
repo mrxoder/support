@@ -4,7 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Support Xoder</title>
-
+<script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAbCccRN9Ys0bCtyre-cL-WBnBtiGWnr0ncypZnQIpxH7ocZA82Vf9FbXK-sujgdwYItIwJIx27ZZ2Wvs&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
 <style>
   :root {
     --bg: #f8fafc;
@@ -148,16 +150,12 @@
 
   <!-- PAYPAL -->
   <section class="card">
-    <h1>PayPal</h1>
-    <p>Donate easily using PayPal.</p>
-    <div class="payment">
-      <div class="qr-box" style="background:white;">
+    <div style="width:100%;">
+      <!--div class="qr-box" style="background:white;">
         <img src="address/paypal.png" alt="PayPal QR">
-      </div>
-
+      </div-->
       <div>
-        <div class="address">ramanantoaninatsilavina@gmail.com</div>
-        <div class="hint">or Scan QR</div>
+          <div id="paypal-container-NCPCASDHQ6CDY"></div>
       </div>
     </div>
   </section>
@@ -234,5 +232,10 @@
   </div>
 
 </main>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "NCPCASDHQ6CDY",
+  }).render("#paypal-container-NCPCASDHQ6CDY")
+</script>
 </body>
 </html>
